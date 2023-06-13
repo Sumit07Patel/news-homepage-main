@@ -1,0 +1,59 @@
+//default styles
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Inter", sans-serif;
+}
+.flex-row {
+  display: flex;
+}
+.ai-c {
+  align-items: center;
+}
+.jc-sb {
+  justify-content: space-between;
+}
+img {
+  display: block;
+  width: 100%;
+}
+
+// fontts
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+
+//colors
+// primary
+$Soft-orange: hsl(35, 77%, 62%);
+$Soft-red: hsl(5, 85%, 63%);
+//neutral
+$Off-white: hsl(36, 100%, 99%);
+$Grayish-blue: hsl(233, 8%, 79%);
+$Dark-grayish-blue: hsl(236, 13%, 42%);
+$Very-dark-blue: hsl(240, 100%, 5%);
+
+//font-size
+$heading: 3.375rem;
+$new: 2.25rem;
+$index: 2rem;
+$NEW-sub-heading: 1.5rem;
+$sub-heading: 1.125rem;
+$text: 1rem;
+//mobile
+$mobile-heading: 2.375rem;
+$mobile-index: 2rem;
+$mobile-NEW-sub-heading: 1.25rem;
+$mobile-sub-heading: 2rem;
+$mobile-text: 1rem;
+//font-weight
+$regular: 400;
+$bold: 700;

@@ -1,0 +1,232 @@
+//styles
+header,
+nav {
+  padding: 0 4rem;
+}
+nav {
+  padding-top: 2.5rem;
+  padding-bottom: 3.5rem;
+  @include fonts($regular, $text, $Dark-grayish-blue);
+  .nav-links {
+    margin-left: auto;
+    align-items: center;
+  }
+  ul li {
+    list-style-type: none;
+    margin-left: 2.5rem;
+  }
+}
+.mobile-img {
+  display: none;
+}
+header {
+  //HERO SECTION
+  p {
+    line-height: 1.5;
+  }
+  .current-content {
+    margin-right: 1.5rem;
+  }
+  .current-content-text {
+    margin-top: 2rem;
+  }
+  .curretn-heading h1 {
+    @include fonts($bold, $heading, $Very-dark-blue);
+    margin-right: 3.375rem;
+  }
+
+  .current-discription {
+    max-width: 100%;
+  }
+  .current-discription p {
+    @include fonts($regular, $text, $Dark-grayish-blue);
+    max-width: 100%;
+  }
+  .current-discription button {
+    @include fonts($bold, $text, $Off-white);
+    padding: 1.125rem 3rem;
+    background: $Soft-red;
+    letter-spacing: 0.18rem;
+    border: none;
+    margin-top: 2.125rem;
+  }
+  .new {
+    width: 100%;
+    padding: 2.375rem 1.625rem;
+    background: $Very-dark-blue;
+
+    h2 {
+      @include fonts($bold, $new, $Soft-orange);
+      padding-bottom: 0.3125rem;
+    }
+    h3 {
+      @include fonts($bold, $NEW-sub-heading, $Off-white);
+      padding-top: 2.1875rem;
+    }
+    P {
+      @include fonts($regular, $text, $Grayish-blue);
+      padding: 1.25rem 0 2rem 0;
+      border-bottom: 1px solid $Grayish-blue;
+    }
+  }
+}
+//MORE INFORMATION SECTION
+.more-content-container {
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .more-content img {
+    // max-width: 6.375rem;
+    width: 6rem;
+  }
+  .text {
+    margin-left: 1.5rem;
+  }
+  .more-content {
+    margin-top: 4.5rem;
+    min-width: 24rem;
+    max-width: 26rem;
+    // margin-right: 2rem;
+  }
+  h3 {
+    @include fonts($bold, $NEW-sub-heading, $Grayish-blue);
+  }
+  h4 {
+    @include fonts($bold, $sub-heading, black);
+    margin: 1.25rem 0 0.875rem 0;
+  }
+  p {
+    @include fonts($regular, 0.875rem, $Dark-grayish-blue);
+  }
+}
+
+//hover states
+.nav-links ul li:hover,
+.more-content h4:hover {
+  color: $Soft-red;
+}
+.current-discription button:hover {
+  background: $Very-dark-blue;
+}
+.current-discription button,
+.nav-links ul li,
+.more-content h4 {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+@media only screen and (max-width: 1024px) {
+  header {
+    padding: 0 1rem;
+    max-width: 100vw;
+  }
+  nav {
+    padding: 1.625rem 1rem 1.875rem 1rem;
+  }
+  .logo img {
+    width: 2.75rem;
+  }
+  .nav-links ul {
+    display: none;
+  }
+  .desktop-img {
+    display: none;
+  }
+  .mobile-img {
+    display: block;
+  }
+  header .current-content {
+    margin-right: 0;
+  }
+
+  .hero-content-container,
+  .current-content-text {
+    flex-direction: column;
+  }
+  //fonts for mobile
+  header .curretn-heading h1 {
+    font-size: $mobile-heading;
+    margin-bottom: 1rem;
+  }
+  .new h2 {
+    font-size: $mobile-sub-heading;
+  }
+  .new {
+    margin-top: 4rem;
+  }
+  .more-content-container .more-content img {
+    max-width: 6.25rem;
+  }
+  .more-content .text {
+    padding-right: 1rem;
+  }
+  .new h2,
+  .new h3,
+  .new p {
+    max-width: 100%;
+  }
+  .more-content-container .more-content {
+    padding-right: 2rem;
+  }
+
+  //ham-menu
+  .ham-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .ham-menu .bar {
+    width: 2.75rem;
+    height: 0.1875rem;
+    background: $Very-dark-blue;
+    margin-bottom: 4px;
+    transition: all 0.2s ease-in-out;
+  }
+  .ham-menu .bar:last-child {
+    margin-bottom: 0;
+  }
+  //mobiel nav bar
+  .bar.bar2.togleBar {
+    display: none;
+  }
+  .bar.bar1.togleBar {
+    transform: rotate(45deg) translatex(6px);
+  }
+  .bar.bar3.togleBar {
+    transform: rotate(-45deg) translateX(4px);
+  }
+  .nav-links ul.toogleNav {
+    display: block;
+  }
+  .nav-links ul {
+    position: fixed;
+    width: 70vw;
+    height: 100%;
+    top: 0;
+    right: 0;
+    padding: 8.25rem 0 0 1rem;
+    background: white;
+  }
+  .nav-links ul li {
+    margin-bottom: 2rem;
+  }
+  .blur-background {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.26);
+    width: 100%;
+    height: 100%;
+  }
+}
+
+//class for toggle
+.extra-text {
+  display: none;
+}
+.display {
+  display: inline-block;
+}
